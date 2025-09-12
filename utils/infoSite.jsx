@@ -14,8 +14,7 @@ export const siteConfig = {
       logo: '/images/img-erikmann.jpg',
       favicon: '/images/ico-movapp.ico',
    },
-   url: 'https://linktree-erikmann-netlify.app', // URL única aquí
-
+   url: 'https://erikmann-linktree.netlify.app',
    links: [
       { name: 'Youtube', url: 'https://www.youtube.com/@erikmanndp' },
       { name: 'Instagram', url: 'https://www.instagram.com/erikmanndp' },
