@@ -8,15 +8,13 @@ import '@styles/global.css';
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-      <!-- Puedes agregar title y meta dinámicamente si deseas -->
-      <!-- <title>{title}</title> -->
+      <title>{Astro.props.title ? `${Astro.props.title}` : 'ErikMann - LinkTree'}</title>
    </head>
 
    <body
       class="bg-gradient-to-b from-primary via-primary to-secondary min-h-screen flex justify-center items-start text-font_color"
    >
-      <main class="w-full max-w-xl flex flex-col items-center text-center px-6 py-12">
+      <main class="w-full max-w-xl flex flex-col items-center text-center px-6 py-8">
          <slot />
       </main>
    </body>

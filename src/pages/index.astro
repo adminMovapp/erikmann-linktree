@@ -12,11 +12,11 @@ const { name, description } = siteConfig.site;
 ---
 
 <Layout title="LinkTree - ErikMann" description="LinkTree - ErikMann" type="website">
-   <img src={logo} alt="Logo" class="w-28 h-28 rounded-full mb-4 border-4 border-line mt-8" />
+   <img src={logo} alt="Logo" class="w-28 h-28 rounded-full mb-4 border-4 border-line mt-2" />
    <h1 class="text-font_color text-2xl font-bold mb-1">{name}</h1>
-   <p class="text-font_color mb-6">{description}</p>
+   <p class="text-font_color mb-3">{description}</p>
 
-   <div class="w-full max-w-md space-y-4 mt-8">
+   <div class="w-full max-w-md space-y-4 mt-5">
       {
          links.map((link) => (
             <a

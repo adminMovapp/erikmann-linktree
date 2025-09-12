@@ -5,7 +5,8 @@ import QrModal from './QrModal.jsx'; // versión React
 
 export default function ShareButtons({ url }) {
    const [showQr, setShowQr] = useState(false);
-   const shareText = ` ${url}`;
+   const shareText = `¡Checa mi LinkTree de ErikMann! Aquí te lo dejo: ${url}`;
+
    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
 
    return (
