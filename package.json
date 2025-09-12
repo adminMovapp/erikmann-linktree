@@ -1,22 +1,24 @@
 {
-  "name": "erikmann-linktree",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^5.12.9",
-     "@astrojs/react": "^4.3.0",
+   "name": "erikmann-linktree",
+   "type": "module",
+   "version": "0.0.1",
+   "scripts": {
+      "dev": "astro dev",
+      "build": "astro build",
+      "preview": "astro preview",
+      "astro": "astro"
+   },
+   "dependencies": {
+      "@astrojs/react": "^4.3.0",
       "@types/react": "^19.1.8",
       "@types/react-dom": "^19.1.6",
-       "react": "^19.1.0",
-      "react-dom": "^19.1.0"
-  },
-    "devDependencies": {
+      "astro": "^5.12.9",
+      "qrcode.react": "^4.2.0",
+      "react": "^19.1.0",
+      "react-dom": "^19.1.0",
+      "react-icons": "^5.5.0"
+   },
+   "devDependencies": {
       "@astrojs/tailwind": "^6.0.2",
       "autoprefixer": "^10.4.21",
       "postcss": "^8.5.6",

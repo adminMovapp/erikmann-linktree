@@ -1,28 +1,23 @@
 ---
 import '@styles/global.css';
-
-const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html>
+<html lang="es">
    <head>
-      <!-- Charset y viewport -->
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-      <!-- SEO básico -->
-
-      <title>{title}</title>
+      <!-- Puedes agregar title y meta dinámicamente si deseas -->
+      <!-- <title>{title}</title> -->
    </head>
 
-   <body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
-      <main class="p-8 md:pt-22 px-8 w-full flex-1 mb-8">
-         <div class="bg-gray-200 text-gray-800 min-h-screen pt-24 -my-1 rounded-2xl shadow-lg pb-1">
-            <slot />
-         </div>
+   <body
+      class="bg-gradient-to-b from-primary via-primary to-secondary min-h-screen flex justify-center items-start text-font_color"
+   >
+      <main class="w-full max-w-xl flex flex-col items-center text-center px-6 py-12">
+         <slot />
       </main>
    </body>
 </html>
