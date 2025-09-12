@@ -1,12 +1,11 @@
 // src/components/ShareButtons.jsx
 import React, { useState } from 'react';
 import { FaWhatsapp, FaQrcode } from 'react-icons/fa';
-import QrModal from './QrModal.jsx'; // versión React
+import QrModal from './QrModal.jsx';
 
 export default function ShareButtons({ url }) {
    const [showQr, setShowQr] = useState(false);
-   const shareText = `¡Checa mi LinkTree de ErikMann! Aquí te lo dejo: ${url}`;
-
+   const shareText = `¡Checa mi LinkTree de ErikMann! Aquí te dejo el link: ${url}`;
    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
 
    return (
