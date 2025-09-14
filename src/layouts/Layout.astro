@@ -1,4 +1,5 @@
 ---
+import { siteConfig } from '../../utils/infoSite.jsx';
 import '@styles/global.css';
 ---
 
@@ -11,9 +12,17 @@ import '@styles/global.css';
       <title>{Astro.props.title ? `${Astro.props.title}` : 'ErikMann - LinkTree'}</title>
    </head>
 
-   <body
-      class="bg-gradient-to-b from-primary via-primary to-secondary min-h-screen flex justify-center items-start text-font_color"
-   >
+   <body class="min-h-screen flex justify-center items-start text-font_color relative bg-[#0b1223]">
+      <picture class="fixed inset-0 -z-10 w-full h-full">
+         <source srcset={siteConfig.assets.background} type="image/jpeg" />
+         <img
+            src={siteConfig.assets.background}
+            alt="Fondo azul"
+            class="object-cover w-full h-full"
+            loading="eager"
+            decoding="async"
+         />
+      </picture>
       <main class="w-full max-w-xl flex flex-col items-center text-center px-6 py-8">
          <slot />
       </main>

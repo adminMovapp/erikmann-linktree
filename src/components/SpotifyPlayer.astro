@@ -5,7 +5,7 @@ interface Props {
    theme?: '0' | '1'; // 0 = claro, 1 = oscuro
 }
 
-const { url, height = 152 } = Astro.props;
+const { url, height = 152, theme = '0' } = Astro.props;
 
 const embedUrl = `https://open.spotify.com/embed${new URL(url).pathname}?utm_source=generator&theme=0`;
 ---
