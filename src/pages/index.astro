@@ -7,12 +7,12 @@ import SpotifyPlayer from '../components/SpotifyPlayer.astro';
 import ShareButtons from '../components/ShareButtons.jsx';
 
 const { links } = siteConfig;
-const { logo } = siteConfig.assets;
+const { rostro } = siteConfig.assets;
 const { name, description } = siteConfig.site;
 ---
 
 <Layout title="LinkTree - ErikMann" description="LinkTree - ErikMann" type="website">
-   <img src={logo} alt="Logo" class="w-28 h-28 rounded-full mb-4 border-4 border-line mt-2" />
+   <img src={rostro} alt="Rostro" class="w-28 h-28 rounded-xl mb-4 mt-2" />
    <h1 class="text-font_color text-2xl font-bold mb-1">{name}</h1>
    <p class="text-font_color mb-3">{description}</p>
 
@@ -23,8 +23,7 @@ const { name, description } = siteConfig.site;
                href={link.url}
                target="_blank"
                rel="noopener noreferrer"
-               class="block w-full text-center 
-               bg-secondary hover:bg-secondary/30 text-font_color font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow"
+               class="block w-full text-center bg-secondary/40 hover:bg-secondary/10 text-font_color font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow backdrop-blur-sm"
             >
                {link.name}
             </a>

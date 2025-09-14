@@ -1,24 +1,27 @@
 // src/components/ShareButtons.jsx
 import React, { useState } from 'react';
-import { FaWhatsapp, FaQrcode } from 'react-icons/fa';
+import { FaQrcode } from 'react-icons/fa';
+import { FiShare2 } from 'react-icons/fi';
 import QrModal from './QrModal.jsx';
 
 export default function ShareButtons({ url }) {
    const [showQr, setShowQr] = useState(false);
-   const shareText = `¡Checa mi LinkTree de ErikMann! Aquí te dejo el link: ${url}`;
-   const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
+
+   const customTitle = 'ErikMann 🎤';
+   const shareText = `🚀 Descubre el LinkTree de ${customTitle} con todos sus links: ${url}`;
+   const shareUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
 
    return (
       <>
          <div className="flex justify-center gap-4 mt-8">
             <a
-               href={whatsappUrl}
+               href={shareUrl}
                target="_blank"
                rel="noopener noreferrer"
-               className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-md transition"
-               aria-label="Compartir por WhatsApp"
+               className="bg-primary hover:bg-primary/70 text-white p-3 rounded-full shadow-md transition"
+               aria-label="Compartir"
             >
-               <FaWhatsapp className="w-6 h-6" />
+               <FiShare2 className="w-6 h-6" />
             </a>
 
             <button

@@ -12,7 +12,10 @@ export const siteConfig = {
 
    assets: {
       logo: '/images/img-erikmann.jpg',
+      rostro: '/images/img-erikmann3.png',
+
       favicon: '/images/ico-movapp.ico',
+      background: '/images/FondoAzul.jpeg',
    },
    url: 'https://erikmann-linktree.netlify.app',
    links: [
