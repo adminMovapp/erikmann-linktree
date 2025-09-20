@@ -7,8 +7,8 @@ export default {
          // },
 
          colors: {
-            primary: '#0b1223',
-            secondary: '#0b2a63',
+            primary: '#171717',
+            secondary: '#171717',
             font_color: '#F2F7FF',
             line: '#ffffff',
 

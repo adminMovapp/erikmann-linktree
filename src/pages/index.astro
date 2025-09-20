@@ -1,39 +1,60 @@
 ---
 import Layout from '@layouts/Layout.astro';
-
 import { siteConfig } from '../../utils/infoSite.jsx';
 import SpotifyPlayer from '../components/SpotifyPlayer.astro';
-
 import ShareButtons from '../components/ShareButtons.jsx';
+import { FaYoutube, FaInstagram, FaFacebook, FaTiktok, FaTwitch } from 'react-icons/fa';
+import { SiThreads, SiX } from 'react-icons/si'; // Simple Icons
 
 const { links } = siteConfig;
 const { rostro } = siteConfig.assets;
 const { name, description } = siteConfig.site;
+
+const iconMap = {
+   FaYoutube,
+   FaInstagram,
+   FaFacebook,
+   FaTiktok,
+   FaTwitch,
+   SiThreads,
+   SiX,
+};
 ---
 
 <Layout title="LinkTree - ErikMann" description="LinkTree - ErikMann" type="website">
-   <img src={rostro} alt="Rostro" class="w-28 h-28 rounded-xl mb-4 mt-2" />
-   <h1 class="text-font_color text-2xl font-bold mb-1">{name}</h1>
-   <p class="text-font_color mb-3">{description}</p>
+   <img src={rostro} alt="rostro" class="w-28 h-28 rounded-full mb-3 border-1 border-line mt-4 mx-auto" />
+   <h1 class="text-font_color text-2xl font-bold mb-2 text-center">{name}</h1>
+   <p class="text-font_color mb-2 text-center">{description}</p>
 
-   <div class="w-full max-w-md space-y-4 mt-5">
-      {
-         links.map((link) => (
-            <a
-               href={link.url}
-               target="_blank"
-               rel="noopener noreferrer"
-               class="block w-full text-center bg-secondary/40 hover:bg-secondary/10 text-font_color font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow backdrop-blur-sm"
-            >
-               {link.name}
-            </a>
-         ))
-      }
+   <div class="w-full max-w-8xl mx-auto mt-20 flex flex-col lg:flex-row gap-20">
+      <!-- Left Section: Links -->
+      <div class="w-full lg:w-1/2 space-y-6">
+         {
+            links.map((link) => {
+               const Icon = iconMap[link.icon];
+               return (
+                  <a
+                     href={link.url}
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     class="flex w-full items-center bg-secondary/40 hover:bg-secondary/10 text-font_color font-semibold py-5 px-14 rounded-lg transition-all duration-200 shadow backdrop-blur-sm"
+                  >
+                     <Icon class="w-20 h-20 mr-4" />
+                     <span class="flex-1 text-center">{link.name}</span>
+                  </a>
+               );
+            })
+         }
+      </div>
+
+      <!-- Right Section: Spotify and Share Buttons -->
+      <div class="w-full lg:w-1/2 flex flex-col items-center space-y-16">
+         <div class="w-full max-w-lg">
+            <SpotifyPlayer url={siteConfig.spotify.url} />
+         </div>
+         <div class="w-full max-w-lg">
+            <ShareButtons client:load url={siteConfig.url} />
+         </div>
+      </div>
    </div>
-
-   <div class="mt-10 w-full max-w-md flex justify-center items-center mx-auto">
-      <SpotifyPlayer url={siteConfig.spotify.url} />
-   </div>
-
-   <ShareButtons client:load url={siteConfig.url} />
 </Layout>
