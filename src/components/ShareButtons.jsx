@@ -8,7 +8,7 @@ export default function ShareButtons({ url }) {
    const [showQr, setShowQr] = useState(false);
 
    const customTitle = 'ErikMann 🎤';
-   const shareText = `🚀 Descubre el LinkTree de ${customTitle} con todos sus links: ${url}`;
+   const shareText = `🚀 LinkTree de ${customTitle} : ${url}`;
    const shareUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
 
    return (
