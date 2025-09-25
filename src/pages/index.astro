@@ -7,7 +7,7 @@ import { FaYoutube, FaInstagram, FaFacebook, FaTiktok, FaTwitch } from 'react-ic
 import { SiThreads, SiX } from 'react-icons/si'; // Simple Icons
 
 const { links } = siteConfig;
-const { rostro } = siteConfig.assets;
+const { logo } = siteConfig.assets;
 const { name, description } = siteConfig.site;
 
 const iconMap = {
@@ -22,7 +22,7 @@ const iconMap = {
 ---
 
 <Layout title="LinkTree - ErikMann" description="LinkTree - ErikMann" type="website">
-   <img src={rostro} alt="rostro" class="w-28 h-28 rounded-full mb-3 border-1 border-line mt-4 mx-auto" />
+   <img src={logo} alt="logo" class="w-28 h-28 rounded-full mb-3 border-1 border-line mt-4 mx-auto" />
    <h1 class="text-font_color text-2xl font-bold mb-2 text-center">{name}</h1>
    <p class="text-font_color mb-2 text-center">{description}</p>
 
@@ -37,7 +37,7 @@ const iconMap = {
                      href={link.url}
                      target="_blank"
                      rel="noopener noreferrer"
-                     class="flex w-full items-center bg-secondary/40 hover:bg-secondary/10 text-font_color font-semibold py-5 px-14 rounded-lg transition-all duration-200 shadow backdrop-blur-sm"
+                     class="flex w-full items-center bg-secondary/40 hover:bg-secondary/10 text-font_color font-semibold py-5 px-14 rounded-lg transition-all duration-200 shadow backdrop-blur-sm neon-outline"
                   >
                      <Icon class="w-20 h-20 mr-4" />
                      <span class="flex-1 text-center">{link.name}</span>
@@ -58,3 +58,34 @@ const iconMap = {
       </div>
    </div>
 </Layout>
+
+<style>
+   .neon-outline {
+      position: relative;
+      z-index: 0;
+   }
+
+   .neon-outline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      border: 2px solid transparent;
+      border-radius: 0.5rem; /* Matches the rounded-lg class */
+      background: linear-gradient(90deg, #ff00ff, #00ffff);
+      -webkit-mask:
+         linear-gradient(#fff 0 0) content-box,
+         linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+      transition: opacity 0.2s ease-in-out;
+      opacity: 0.75;
+   }
+
+   .neon-outline:hover::before {
+      opacity: 1;
+   }
+</style>
