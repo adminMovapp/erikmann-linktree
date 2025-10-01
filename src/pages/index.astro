@@ -7,8 +7,8 @@ import { FaYoutube, FaInstagram, FaFacebook, FaTiktok, FaTwitch } from 'react-ic
 import { SiThreads, SiX } from 'react-icons/si'; // Simple Icons
 
 const { links } = siteConfig;
-const { logo } = siteConfig.assets;
-const { name, description } = siteConfig.site;
+const { logo, rostro } = siteConfig.assets;
+const { name, description, description2, description3 } = siteConfig.site;
 
 const iconMap = {
    FaYoutube,
@@ -22,11 +22,13 @@ const iconMap = {
 ---
 
 <Layout title="LinkTree - ErikMann" description="LinkTree - ErikMann" type="website">
-   <img src={logo} alt="logo" class="w-28 h-28 rounded-full mb-3 border-1 border-line mt-4 mx-auto" />
+   <img src={rostro} alt="rostro" class="w-28 h-28 rounded-full mb-3 border-1 border-line mt-4 mx-auto" />
    <h1 class="text-font_color text-2xl font-bold mb-2 text-center">{name}</h1>
-   <p class="text-font_color mb-2 text-center">{description}</p>
+   <p class="text-font_color mb-2 text-center text-xs">{description}</p>
+   <p class="text-font_color mb-2 text-center text-xs">{description2}</p>
+   <p class="text-font_color mb-2 text-center text-xs">{description3}</p>
 
-   <div class="w-full max-w-8xl mx-auto mt-20 flex flex-col lg:flex-row gap-20">
+   <div class="w-full max-w-8xl mx-auto mt-8 flex flex-col lg:flex-row gap-52">
       <!-- Left Section: Links -->
       <div class="w-full lg:w-1/2 space-y-6">
          {
@@ -37,7 +39,7 @@ const iconMap = {
                      href={link.url}
                      target="_blank"
                      rel="noopener noreferrer"
-                     class="flex w-full items-center bg-secondary/40 hover:bg-secondary/10 text-font_color font-semibold py-5 px-14 rounded-lg transition-all duration-200 shadow backdrop-blur-sm neon-outline"
+                     class="flex w-full items-center bg-secondary/40 hover:bg-secondary/10 text-font_color font-semibold py-4 px-14 rounded-lg transition-all duration-200 shadow backdrop-blur-sm neon-outline"
                   >
                      <Icon class="w-20 h-20 mr-4" />
                      <span class="flex-1 text-center">{link.name}</span>
@@ -66,23 +68,6 @@ const iconMap = {
    }
 
    .neon-outline::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-      border: 2px solid transparent;
-      border-radius: 0.5rem; /* Matches the rounded-lg class */
-      background: linear-gradient(90deg, #ff00ff, #00ffff);
-      -webkit-mask:
-         linear-gradient(#fff 0 0) content-box,
-         linear-gradient(#fff 0 0);
-      -webkit-mask-composite: destination-out;
-      mask-composite: exclude;
-      transition: opacity 0.2s ease-in-out;
-      opacity: 0.75;
    }
 
    .neon-outline:hover::before {

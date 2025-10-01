@@ -3,7 +3,10 @@ export const siteConfig = {
    site: {
       name: 'Erik Mann',
       title: '',
-      description: ' ',
+      description: 'Lider de Movapp, Creador de contenido',
+      description2: 'Y de El Hack vs montadeudas.',
+      description3: 'Animal love y  TechFan.',
+
       keywords: 'linktree, erikmann ',
       author: 'LinkTree - ErikMann',
       locale: 'es_MX',
@@ -12,10 +15,10 @@ export const siteConfig = {
 
    assets: {
       logo: '/images/img-erikmann.jpg',
-      rostro: '/images/img-erikmann3.png',
+      rostro: '/images/Erik-Perfil-2.png',
 
       favicon: '/images/ico-movapp.ico',
-      background: '/images/FondoMuro.jpeg',
+      background: '/images/Textura1.jpeg',
    },
    url: 'https://erikmann-linktree.netlify.app',
    links: [
