@@ -18,7 +18,7 @@ export const siteConfig = {
       rostro: '/images/Erik-Perfil-2.png',
 
       favicon: '/images/ico-movapp.ico',
-      background: '/images/FondoMicrofono.jpeg',
+      background: '/images/Fondo_linktree.jpg',
    },
    url: 'https://erikmann-linktree.netlify.app',
    links: [
