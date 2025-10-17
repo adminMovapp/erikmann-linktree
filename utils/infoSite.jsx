@@ -20,7 +20,7 @@ export const siteConfig = {
       favicon: '/images/ico-movapp.ico',
       background: '/images/Fondo_linktree.jpg',
    },
-   url: 'https://erikmann-linktree.netlify.app',
+   url: 'https://linktree.erikmann.mx',
    links: [
       { name: 'Youtube', url: 'https://www.youtube.com/@erikmanndp', icon: 'FaYoutube' },
       { name: 'Instagram', url: 'https://www.instagram.com/erikmanndp', icon: 'FaInstagram' },

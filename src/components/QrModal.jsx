@@ -30,7 +30,7 @@ export default function QrModal({ url, onClose }) {
                   }}
                />
 
-               <p className="text-gray-800 text-sm">Escanea el QR para abrir el LinkTree</p>
+               <p className="text-gray-800 text-sm">Escanea el QR para abrir LinkTree</p>
             </div>
          </div>
       </div>
