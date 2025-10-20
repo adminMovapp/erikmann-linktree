@@ -1,4 +1,4 @@
-import { siteConfigData } from './infoSite.jsx';
+import { siteConfig as siteConfigData } from './infoSite.jsx';
 
 // Configuración centralizada
 export const siteConfig = {
@@ -12,24 +12,16 @@ export const siteConfig = {
    isProduction: true,
    debugMode: false,
 
-   // URLs dinámicas
-   get siteUrl() {
-      return this.urls.production;
-   },
-
-   // URL canónica (siempre producción para SEO)
-   get canonicalUrl() {
-      return this.urls.production;
-   },
+   // URL fija desde infoSite
+   siteUrl: siteConfigData.url,
+   canonicalUrl: siteConfigData.canonicalUrl,
 
    // Control de indexación
    get noIndex() {
       return this.isStaging || this.isDev;
    },
 
-   get robotsContent() {
-      return this.seo.robots.production;
-   },
+   robotsContent: 'index, follow',
 
    // URLs de assets
    get logoUrl() {
