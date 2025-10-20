@@ -1,6 +1,6 @@
 import React from 'react';
 import { QRCodeCanvas } from 'qrcode.react';
-import { siteConfig } from '../../utils/infoSite.jsx';
+import { siteConfig } from '@utils/infoSite.jsx';
 
 const { logo } = siteConfig.assets;
 
