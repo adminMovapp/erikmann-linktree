@@ -7,7 +7,7 @@ export const siteConfig = {
       description2: 'Y de El Hack vs montadeudas.',
       description3: 'Animal love y  TechFan.',
 
-      keywords: 'linktree, erikmann, contenido digital, movapp',
+      keywords: 'linktree, erikmann ',
       author: 'LinkTree - ErikMann',
       locale: 'es_MX',
       language: 'es',
@@ -34,20 +34,5 @@ export const siteConfig = {
 
    spotify: {
       url: 'https://open.spotify.com/show/0rd9N6Xcs0MgDE2YyTKvzZ',
-   },
-
-   canonicalUrl: 'https://linktree.erikmann.mx',
-
-   business: {
-      contactType: 'customer service',
-      availableLanguage: ['es', 'en'],
-      country: 'Mexico',
-      serviceType: 'Digital Content',
-   },
-
-   social: {
-      facebook: 'https://www.facebook.com/erikmanndp',
-      twitter: '@erikmanndp',
-      instagram: 'https://www.instagram.com/erikmanndp',
    },
 };
