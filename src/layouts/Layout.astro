@@ -8,20 +8,21 @@ import { generateSEOTags, generateOrganizationSchema } from '@/utils/seo.jsx';
 // Generar tags SEO
 let seoTags;
 try {
+   const canonicalUrl = siteConfig.canonicalUrl || siteConfig.url; // Fallback to siteConfig.url if canonicalUrl is undefined
    seoTags = generateSEOTags({
       ...Astro.props,
-      url: new URL(Astro.url.pathname, siteConfig.canonicalUrl).href,
+      url: new URL(Astro.url.pathname, canonicalUrl).href,
    });
 } catch (error) {
    console.error('Error generating SEO tags:', error);
    seoTags = generateSEOTags({
       ...Astro.props,
-      url: siteConfig.url,
+      url: siteConfig.url, // Fallback to default URL
    });
 }
 const organizationSchema = generateOrganizationSchema();
 
-const twitterHandle = siteConfig.social?.twitter || '';
+const twitterHandle = siteConfig.social?.twitter || ''; // Ensure twitter handle is defined
 ---
 
 <!doctype html>
