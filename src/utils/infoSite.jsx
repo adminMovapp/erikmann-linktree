@@ -4,8 +4,8 @@ export const siteConfig = {
       name: 'Erik Mann',
       title: '',
       description: 'Lider de Movapp, Creador de contenido',
-      description2: 'Y de El Hack vs montadeudas.',
-      description3: 'Animal love y  TechFan.',
+      description2: 'Y de El Hack vs Montadeudas.',
+      description3: 'Animal lover y TechFan.',
 
       keywords: 'linktree, erikmann ',
       author: 'LinkTree - ErikMann',
