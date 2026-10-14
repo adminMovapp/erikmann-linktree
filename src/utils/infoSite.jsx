@@ -32,6 +32,26 @@ export const siteConfig = {
       // { name: 'Spotify', url: 'https://open.spotify.com/show/0rd9N6Xcs0MgDE2YyTKvzZ', icon: 'FaSpotify' },
    ],
 
+   apps: [
+      {
+         store: 'Google Play',
+         label: 'Disponible en',
+         url: 'https://play.google.com/store/apps/details?id=com.movapp.mobile&hl=es_MX&referrer=utm_source%3Dwebsite%26utm_medium%3Dorganic%26utm_campaign%3Dsite_download',
+         icon: 'FaGooglePlay',
+      },
+      {
+         store: 'App Store',
+         label: 'Descárgala en',
+         url: 'https://apps.apple.com/mx/app/movapp-by-erik-mann/id6755009066?ct=website_download',
+         icon: 'FaApple',
+      },
+   ],
+
+   website: {
+      name: 'Visita movapp.org',
+      url: 'https://movapp.org/',
+   },
+
    spotify: {
       url: 'https://open.spotify.com/show/0rd9N6Xcs0MgDE2YyTKvzZ',
    },
