@@ -3,7 +3,7 @@ import Layout from '@layouts/Layout.astro';
 import { siteConfig } from '@utils/infoSite.jsx';
 import SpotifyPlayer from '@components/SpotifyPlayer.astro';
 import ShareButtons from '@components/ShareButtons.jsx';
-import { FaYoutube, FaInstagram, FaFacebook, FaTiktok, FaTwitch, FaGooglePlay, FaApple, FaGlobe } from 'react-icons/fa';
+import { FaYoutube, FaInstagram, FaFacebook, FaTiktok, FaTwitch, FaGooglePlay, FaApple, FaGlobe, FaLinkedin } from 'react-icons/fa';
 import { SiThreads, SiX } from 'react-icons/si'; // Simple Icons
 
 const { links, apps, website } = siteConfig;
@@ -11,6 +11,7 @@ const { logo, rostro } = siteConfig.assets;
 const { name, description, description2, description3 } = siteConfig.site;
 
 const iconMap = {
+   FaLinkedin,
    FaYoutube,
    FaInstagram,
    FaFacebook,
@@ -30,7 +31,7 @@ const iconMap = {
    <p class="text-font_color mb-2 text-center text-xs">{description2}</p>
    <p class="text-font_color mb-2 text-center text-xs">{description3}</p>
 
-   <div class="w-full max-w-8xl mx-auto mt-8 flex flex-col gap-10">
+   <div class="w-full max-w-8xl mx-auto mt-8 flex flex-col gap-4">
       <!-- Links Section -->
       <div class="w-full flex flex-col gap-4">
          {
@@ -95,7 +96,7 @@ const iconMap = {
       </div>
 
       <!-- Spotify and Share Buttons Section -->
-      <div class="w-full flex flex-col items-center space-y-2">
+      <div class="w-full flex flex-col items-center space-y-2 mt-6">
          <div class="w-full max-w-lg flex justify-center">
             <SpotifyPlayer url={siteConfig.spotify.url} />
          </div>

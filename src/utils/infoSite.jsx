@@ -22,6 +22,7 @@ export const siteConfig = {
    },
    url: 'https://linktree.erikmann.mx',
    links: [
+      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/erikmann-movapp', icon: 'FaLinkedin' },
       { name: 'Youtube', url: 'https://www.youtube.com/@erikmanndp', icon: 'FaYoutube' },
       { name: 'Instagram', url: 'https://www.instagram.com/erikmanndp', icon: 'FaInstagram' },
       { name: 'Facebook', url: 'https://www.facebook.com/erikmanndp', icon: 'FaFacebook' },
@@ -48,7 +49,7 @@ export const siteConfig = {
    ],
 
    website: {
-      name: 'Visita movapp.org',
+      name: 'Web',
       url: 'https://movapp.org/',
    },
 
